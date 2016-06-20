@@ -1,0 +1,68 @@
+
+div.navbar.navbar-default.navbar-fixed-top
+    div.container
+        div.navbar-header
+            button(type="button" data-toggle="collapse" data-target=".top-collapse").navbar-toggle
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a(href="#").navbar-brand Food Taxi
+
+        div.navbar-collapse.collapse.top-collapse
+            ul.nav.navbar-nav
+                li
+                    a(href="#") Home
+                li
+                    a(href="#").active Shop
+
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href="#") Cart
+
+div.container
+    div.col-md-4
+    div.col-md-4
+    form.form-inline.pull-right
+        input(type="search" name="search" autocomplete='off' placeholder='search')
+        button( type="submit").btn-sm.glyphicon.glyphicon-search
+    div.col-md-4
+
+br
+
+div.container
+        div.col-md-4
+        div.col-md-4
+            button.btn-lg.btn-block.btn-default Shop by History
+            button.btn-lg.btn-block.btn-default Shop by Aisle
+            button.btn-lg.btn-block.btn-default Pick Delivery Window
+        div.col-md-4
+
+
+
+
+div.navbar.navbar-default.navbar-fixed-bottom
+    div.container
+        div.navbar-header
+            button( type="button" data-toggle="collapse" data-target=".bottom-collapse").navbar-toggle
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a( href="#").navbar-brand
+                img(src="../../../images/FoodTaxi-07.png" width="30px").img-responsive
+
+        div.navbar-collapse.collapse.bottom-collapse
+            ul.nav.navbar-nav
+                li
+                    a(href="#") Home
+                li
+                    a(href="#") Scan
+                li
+                    a(href="#") Specials
+                li
+                    a(href="#") Orders
+
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href="#") More Options
+
+

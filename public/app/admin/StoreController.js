@@ -1,0 +1,1 @@
+//TODO provide a store administration interface

@@ -1,0 +1,47 @@
+.simpleCart_items
+{
+	width:100%;
+	font-size:12pt;
+}
+
+.headerRow div
+{
+	position: relative;
+	display:inline-block;
+	font-weight: 600;
+}
+
+.headerRow
+{
+	border-bottom:1px solid gray;
+}
+
+.itemRow div
+{
+	position: relative;
+	display:inline-block;
+}
+
+.item-name
+{
+	width:25%;
+	max-width:25%;
+}
+
+.item-price, .item-total
+{
+	text-align: center;
+	width:10%;
+}
+
+.item-decrement, .item-increment
+{
+	text-align:center;
+	width:5%;
+}
+
+.checkout
+{
+	position: relative;
+	padding:10px;
+}

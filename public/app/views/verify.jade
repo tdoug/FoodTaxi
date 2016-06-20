@@ -1,0 +1,14 @@
+#verify.ng-scope
+  header
+   a.nav-left(ng-click='goBack()') Back
+   span.title Verify
+
+  .main.container.pad-top
+    form(name="SMSVerify")
+      .form-group
+        label(for="SMSCode") Enter 3 digit code from SMS 
+        input.form-control(type="text", placeholder="SMS Code", name="SMSCode")
+        span.help-block SMS Sent to +555-555-5555
+      .form-group
+        button.btn-default.btn Submit
+

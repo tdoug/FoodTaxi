@@ -1,0 +1,21 @@
+#validationpage(ng-controller="RegisterController")
+	.navbar.navbar-default.navbar-fixed-top
+		.container-fluid.topbar.list-inline.text-center
+			a.goback.col-sm-3(ng-click="goBack()") Back
+			h4.col-sm-6 VALIDATION
+			a.validate-retry.col-sm-3(href="/validation") Resend
+
+	.validateform.text-center.col-sm-12.col-xs-12
+		form(name="smsValidationForm" novalidate)
+			p.validation-message Enter 3 digit code from SMS
+			.form-group.col-sm-6.col-xs-6.col-sm-offset-3.col-xs-offset-3
+				input.form-control(type="text" placeholder="SMS code" name="smsCode" ng-model="smsCode.remote" ng-required="true" ng-maxlength="3" ng-minlength="3" ng-pattern="/[0-9]/")
+				//- span.validationerror(ng-show="smsValidationForm.smsCode.$error.required") SMS code is required
+				span.validationerror(ng-show="smsValidationForm.smsCode.$error.maxlength") The SMS code is too long 
+				span.validationerror(ng-show="smsValidationForm.smsCode.$error.minlength") The SMS code is too short
+				span.validationerror(ng-show="smsValidationForm.smsCode.$error.pattern") Please use only numbers
+			.col-sm-12.col-xs-12
+				p.validation-confirm Message sent to 18781234564
+			.form-group.col-sm-6.col-xs-6.col-sm-offset-3.col-xs-offset-3
+				button.btn.btn-primary.validate-btn(ng-disabled="smsValidationForm.$invalid" ng-click=" validate() ") Submit
+	

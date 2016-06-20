@@ -1,0 +1,57 @@
+.topbar
+{	
+	vertical-align: middle;
+	text-align: right;
+	background-color: #f8f8f8;
+	padding:1%;
+}
+
+.big_button
+{
+	display:block;
+	padding:1%;
+	width:100%;
+	margin-bottom:1%;	
+}
+
+.bottombar
+{
+	vertical-align: middle;
+	text-align: center;
+	background-color: #f8f8f8;
+	padding:1%;	
+}
+
+.bottombar a
+{
+	display: inline-block;	
+	height:100%;
+	width:100%;
+	vertical-align: middle;
+	border-radius: 5px;
+}
+
+.bottombar .icon
+{
+	display: inline-block;
+	width:20%;
+}
+
+.bottombar .iconarea
+{
+	display: inline-block;
+	height:100px;
+	width:90%;	
+}
+
+.bottombar .iconlabel
+{
+	position: relative;
+	margin-top:1.5%;
+}
+
+.bottombar .iconarea img
+{
+	height:100%;
+	width:100%;	
+}

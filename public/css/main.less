@@ -1,0 +1,63 @@
+@import "mobi";
+
+#registerpage, #areanotserviced, #verify, #verificationsuccesspage {
+
+  .main {
+    //   padding-top: 1em;
+  }
+
+  label, a.btn-primary, input {
+    margin-top: 1em;
+  }
+
+  p {
+    line-height: 2em;
+  }
+
+}
+
+.status-bars {
+  .evenly-inline;
+
+
+  padding-top: @grid-gutter-width / 2 !important;
+
+  background: @btn-default-bg;
+  z-index:1;
+  position: fixed;
+  width: 100%;
+
+  .name { font-size: 0.5em; }
+
+  .progress {
+
+    margin-top: 0.5em;
+    height: 0.5em;
+
+    .progress-bar {
+      &.half { width: 50%; }
+      &.full { width: 100%; }
+    }
+
+  }
+}
+
+#substitutions {  
+  .main > .item-row:nth-child(2) { 
+    padding-top: 3.75em;
+  }
+
+  .sub-nav {
+    padding-bottom: 5.75em;
+    .center-flex(row);
+    .justify-content(center);
+    padding-left: @grid-gutter-width / 2;
+    padding-right: @grid-gutter-width / 2;
+    .btn { flex:1; }
+  }
+  .main > .item-row:nth-last-child(2) { 
+
+  }
+}
+
+

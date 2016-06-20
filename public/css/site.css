@@ -1,0 +1,378 @@
+body {
+  padding-top: 10px;
+  font-size: 100%;
+}
+.flash-notification-message {
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
+  opacity: 1;
+  font-size: 200%;
+  background-color: #ccc;
+  color: #000;
+  border: 1px solid #222;
+}
+.flash-notification-message.ng-leave-active {
+  opacity: 0;
+}
+.fromsigninmessage {
+  font-size: 300%;
+}
+.table > tbody > tr > td {
+  border: none;
+}
+.toppadded {
+  padding-top: 53px;
+}
+.fs8 {
+  font-size: 60%;
+}
+.fs9 {
+  font-size: 75%;
+}
+.fs10 {
+  font-size: 83%;
+}
+.fs11 {
+  font-size: 90%;
+}
+.fs12 {
+  font-size: 100%;
+}
+#areanotserviced,
+#registerpage,
+#registerpage h4 {
+  font-size: 150%;
+}
+#registerpage .registerform {
+  margin-top: 100px;
+}
+#registerpage .cellphonevalidationmessage {
+  font-size: 100%;
+}
+#top .well,
+#bottom .well {
+  margin: 0 0 10px 0;
+  padding: 2px 4px;
+}
+#loginrecovery h4 {
+  font-size: 300%;
+  padding-top: 50px;
+  margin-bottom: 70px;
+}
+#loginrecovery label {
+  font-size: 200%;
+}
+#loginrecovery input[type='email'],
+#loginrecovery input[type='text'] {
+  font-size: 150%;
+  height: 50px;
+}
+#loginrecovery .recoverbutton {
+  font-size: 150%;
+  margin-top: 150px;
+  background-color: #f8b31e;
+  color: #000;
+  border: 1px solid #000;
+}
+#myaccount h4 {
+  font-size: 300%;
+}
+.goback {
+  font-size: 150%;
+  padding: 0 9px;
+}
+#myaccount .mainmenu,
+#mainmenupage .mainmenu {
+  margin-top: 100px;
+}
+#myaccount .btn-success {
+  margin-bottom: 19px;
+  font-size: 120%;
+  padding: 10px 0;
+  background-color: #f8b31e;
+  color: #000;
+  border: 1px solid #000;
+}
+#mainmenupage .menubutton {
+  margin-bottom: 7px;
+  font-size: 150%;
+  padding: 10px 0;
+  background-color: #f8b31e;
+  color: #000;
+  border: 1px solid #000;
+}
+#mainmenupage .cart-button {
+  font-size: 150%;
+}
+#recoverinfoform input[type='text'],
+#recoverinfoform input[type='email'] {
+  height: 100px;
+  font-size: 400%;
+}
+#recoverinfoform input[type='email'] {
+  margin-bottom: 35px;
+}
+.searchBox {
+  margin: 0 0 20px 0;
+}
+.browse-image {
+  margin: 0 auto;
+}
+#areanotserviced a {
+  display: inline-block;
+  margin-left: 13px;
+  font-size: 110%;
+}
+#areanotserviced .well {
+  width: 100%;
+}
+#areanotserviced h5 {
+  font-size: 120%;
+}
+#areanotserviced p {
+  font-size: 100%;
+}
+#areanotserviced #top {
+  margin-top: 20px;
+}
+#areanotserviced input[type='text'],
+#areanotserviced input[type='email'] {
+  height: 30px;
+  font-size: 80%;
+}
+#areanotserviced .noservice-button {
+  font-size: 100%;
+  background-color: #f8b31e;
+  color: #000;
+  border: 1px solid #000;
+  width: 100%;
+}
+#checkavailability .checklabel {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 130%;
+}
+#checkavailability .checkinput {
+  height: 30px;
+  font-size: 130%;
+  width: 40%;
+}
+.navbar-header a.navbar-brand {
+  margin-top: -15px;
+  margin-bottom: -20px;
+}
+.navbar-inverse {
+  background-color: #96c223;
+  border-color: #080808;
+}
+h6 {
+  color: #fff;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer p {
+  border-top: 1px solid #d7e0e2;
+}
+.navbar-form .form-group {
+  margin-left: 10px;
+}
+.navbar-form button {
+  margin-left: 10px;
+}
+.toast-warning {
+  background-color: #333;
+  top: 25%;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+.logo {
+  margin: 0 auto 7px;
+}
+.btn-primary:active {
+  color: #f8b31e;
+}
+.login-button,
+.cancel-button {
+  margin: 9px 0 0 0;
+  width: 80%;
+  background-color: #f8b31e;
+  color: #000;
+  border: 1px solid #000;
+}
+.login-button:hover,
+.cancel-button:hover {
+  background-color: #000;
+  color: #f8b31e;
+  border: 1px solid #f8b31e;
+}
+/** CSS for main page **/
+#mainpage .main-buttons {
+  margin: 13px 0 0 0;
+}
+#mainpage .main-buttons a {
+  font-size: 150%;
+}
+#mainpage .main-signin-button,
+.main-register-button {
+  background-color: #f8b31e;
+  color: #000;
+  border: 1px solid #000;
+}
+#mainpage .main-signin-button:hover,
+.main-register-button:hover {
+  background-color: #000;
+  color: #f8b31e;
+  border: 1px solid #f8b31e;
+}
+#mainpage .main-middle-button,
+.main-middle-button:hover {
+  background-color: #f8b31e;
+  color: #000;
+  border: 1px solid #000;
+}
+#mainpage .main-message {
+  margin: 50px 0 60px 0;
+  font-size: 200%;
+}
+/**end CSS for main page**/
+/** CSS for signin page**/
+#signin {
+  font-size: 100%;
+}
+#signin input[type='email'] {
+  margin-top: 15px;
+  margin-bottom: 13px;
+}
+#signin input[type='email'],
+#signin input[type='password'] {
+  height: 30px;
+  font-size: 150%;
+}
+#signin button {
+  font-size: 150%;
+}
+/**end CSS for signin page**/
+#validationpage a {
+  font-size: 150%;
+}
+#validationpage h4 {
+  font-size: 200%;
+}
+#validationpage .validateform {
+  margin-top: 80px;
+}
+#validationpage input[type='text'] {
+  font-size: 150%;
+  height: 30px;
+}
+#validationpage .validation-message,
+#validationpage .validation-confirm {
+  margin: 36px 0 0 0;
+  font-size: 120%;
+}
+#validationpage .validate-btn[disabled],
+#validationpage .validate-btn[disabled]:hover {
+  background-color: #ccc;
+}
+#validationpage .validate-btn {
+  background-color: #f8b31e;
+  border: none;
+  color: #000;
+  width: 100%;
+  font-size: 120%;
+  margin-top: 75px;
+}
+#validationpage .validate-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+#validationpage .validationerror {
+  background-color: #c00;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 120%;
+}
+#verificationsuccesspage {
+  font-size: 200%;
+}
+#verificationsuccesspage h4 {
+  font-size: 150%;
+}
+#verificationsuccesspage p {
+  font-size: 120%;
+}
+#verificationsuccesspage input[type='text'],
+#verificationsuccesspage input[type='password'] {
+  font-size: 100%;
+  height: 30px;
+}
+#verificationsuccesspage .small {
+  font-size: 90%;
+}
+#verificationsuccesspage button {
+  background-color: #f8b31e;
+  border: none;
+  color: #000;
+  width: 100%;
+  font-size: 120%;
+  margin-top: 75px;
+}
+.register-center {
+  font-size: 18px;
+}
+.bottombar {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+.listvert {
+  margin-bottom: 4px;
+}
+.smalltitle {
+  font-size: 116%;
+}
+.swipe-button {
+  margin-top: 30px;
+}
+.recoverinfo {
+  font-size: 200%;
+  padding: 0 13px;
+}
+#creditcard-validate-menu {
+  margin-top: 50px;
+}
+#footer-menu ul,
+#creditcard-validate-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#creditcard-validate-menu ul li {
+  display: inline-block;
+  margin: 0 3px;
+}
+#creditcard-validate-menu a {
+  width: 45px;
+  height: 6px;
+  background-color: #f8b31e;
+  border: 1px solid #000;
+  border-radius: 0;
+  padding: 0;
+}
+#footer-menu .iconlabel {
+  font-size: 150%;
+}
+#footer-menu ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#footer-menu a {
+  width: 45px;
+  height: 45px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #f8b31e;
+  border: 1px solid #000;
+}

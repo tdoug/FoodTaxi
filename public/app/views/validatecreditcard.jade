@@ -1,0 +1,84 @@
+#validatecreditcard
+	.navbar.navbar-default.navbar-fixed-top
+		h4.text-center PAYMENT INFORMATION
+
+	#creditcard-validate-menu.text-center
+		ul
+			li
+				.cclabel.text-center Label 1
+				a.btn.btn-primary(href='/mainmenu')
+			li
+				.cclabel.text-center Label 2
+				a.btn.btn-primary(href='/scan')
+			li
+				.cclabel.text-center Label 3
+				a.btn.btn-primary(href='/specials')
+			li
+				.cclabel.text-center Label 4
+				a.btn.btn-primary(href='/orders')
+			li
+				.cclabel.text-center Label 5
+				a.btn.btn-primary(href='/more')
+
+	.col-xs-10.col-sm-10.col-xs-offset-1.col-sm-offset-1
+		table.table.table-responsive
+			tr
+				td
+					p.fs12.pull-left Subtotal
+				td
+					p.fs12.pull-right $0.00 <!-- {{cart.subtotal}} -->
+			tr
+				td
+					p.fs12.pull-left Sales Tax
+				td
+					p.fs12.pull-right $0.00 <!-- {{cart.salestax}} -->
+			tr
+				td
+					p.fs12.pull-left Delivery Fee
+				td
+					p.fs12.pull-right $0.00 <!-- {{cart.deliveryfee}} -->
+			tr
+				td
+					p.fs12.pull-left Fuel Charge
+				td
+					p.fs12.pull-right $0.00 <!-- {{cart.fuelcharge}} -->
+			tr
+				td
+					p.fs12.pull-left Total
+				td
+					p.fs12.pull-right $0.00 <!-- {{cart.total}} -->
+		.ccform
+			form(name="creditcardForm")
+				.form-group
+					input.form-control(type="text" ng-model='ccname' placeholder="Name on card")
+					input.form-control(type="text" ng-model='ccnumber' placeholder="Card number")
+				.form-group
+					select.form-control(ng-model='cctype' placeholder="Credit Card")
+				.form-group
+					.col-xs-6.col-sm-6
+						label.pull-left Expiration Date
+					.col-xs-3.col-sm-3
+						select.form-control(ng-model='ccmonth' placeholder="Month")
+					.col-xs-3.col-sm-3
+						select.form-control(ng-model='ccyear' placeholder="Year")
+				.form-group
+					.col-xs-6.col-sm-6.col-xs-offset-6.col-sm-offset-6
+						input.form-control(type="text" ng-model='ccCSV' placeholder="CSV")
+				.form-group
+					input.form-control(type='text' ng-model='ccaddress' placeholder='Billing Address')
+					.col-xs-6.col-sm-6
+						input.form-control(type='text' ng-model='cccity' placeholder='City')
+					.col-xs-3.col-sm-3
+						select.form-control(ng-model='ccstate' placeholder='State')
+					.col-xs-3.col-sm-3
+						input.form-control(type='text' ng-model='cczip' placeholder='Zip Code')
+				.form-group
+					.col-xs-1.col-sm-1
+						input.form-control(type='checkbox' ng-model='ccsaveinfo')
+					.col-xs-10.col-sm-10
+						label Save credit card details
+				.form-group
+					.col-xs-offset-9.col-sm-offest-9
+						a.btn.btn-primary.pull-right(href='/ccdetails') Continue
+
+include ../includes/footer

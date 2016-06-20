@@ -1,0 +1,13 @@
+#loginrecovery
+    .col-sm-12.col-xs-12
+        .container
+            h4.text-center Login Recovery
+            form(name="LoginRecovery")
+                .form-group
+                    label Email Address
+                    input.form-control.col-sm-4.col-xs-4(type='email' name='email' ng-model='email')
+                .form-group
+                    label Last Name
+                    input.form-control.col-sm-4.col-xs-4(type='text' name='lname' ng-model='lname')
+                .form-group
+                    button.btn.btn-primary.recoverbutton.pull-right Submit

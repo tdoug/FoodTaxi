@@ -1,0 +1,23 @@
+#areanotserviced
+  header
+    a.nav-left(href="/") Home
+    .title Area Not Serviced
+
+  .main.container.pad-top
+
+    p Unfortunately, we currently do not deliver in that area.
+    p We may begin to service your area.  If you would like us to notify you, please provide your email address.
+
+    form(name="SubmitEmail")
+      .form-group
+        label(for="EmailAddress") Email
+        input.form-control(type="email", placeholder="Email Address", name="EmailAddress", ng-model="email")
+      .form-group
+        button.btn-default.btn Submit
+
+    form(name="SubmitZipCode")
+      .form-group
+        label(for="ZipCode") Try a new Zipcode
+        input.form-control(type="text", placeholder="Enter a Zip Code", name="ZipCode")
+      .form-group
+      button.btn.btn-default Go

@@ -1,0 +1,56 @@
+#profile  
+  header
+    a.nav-left(ng-click='goBack()') Back
+    span.title Profile
+  .main.container.pad-top
+    form.form-horizontal(name="profileForm")
+      fieldset
+        legend User Profile
+        .form-group
+        .form-group
+          label.col-md-2.control-label(for="email") E-Mail
+          .col-md-10
+            input.form-control(name="email", type="text", placeholder="E-mail", ng-model="email", required)
+          label.col-md-2.control-label(for="fname") First Name
+          .col-md-10
+            input.form-control(name="fname", type="text", placeholder="First Name", ng-model="fname", required)
+        .form-group
+          label.col-md-2.control-label(for="lname") Last Name
+          .col-md-10
+            input.form-control(name="lname", type="text", placeholder="Last Name", ng-model="lname", required)
+        .form-group
+          label.col-md-2.control-label(for="address") Address 1
+          .col-md-10
+            input.form-control(name="address", type="text", placeholder="Address", ng-model="address")
+        .form-group
+          label.col-md-2.control-label(for="address_2") Address 2
+          .col-md-10
+            input.form-control(name="address_2", type="text", placeholder="Address 2 (optional)", ng-model="address_2")
+        .form-group
+          label.col-md-2.control-label(for="state") State
+          .col-md-10
+            select(name=state, placeholder="State", id="state-select",ng-model="state", ng-options="state for (abbrv, state) in states")
+        .form-group
+          label.col-md-2.control-label(for="city") City
+          .col-md-10
+            select(name=state, placeholder="City", ng-model="city")
+              option(value="{{city}}")
+                {{city}}
+        .form-group
+          label.col-md-2.control-label(for="cell") Mobile Number
+          .col-md-10
+            input.form-control(name="cell", type="text", placeholder="Mobile Number", ng-model="cell")
+        .form-group
+          label.col-md-2.control-label(for="phone_type") Phone Type
+          .col-md-10
+            input.form-control(name="phone_type", type="text", placeholder="Please type the model of your phone", ng-model="phone_type")		
+        .form-group
+          label.col-md-2.control-label(for="password") Password
+          .col-md-10
+            input.form-control(name="password", type="password", placeholder="If desired, enter a new password", ng-model="password", required)
+        .form-group
+          .col-md-10.col-md-offset-2
+            .pull-right
+              button.btn.btn-primary(ng-click="update()", ng-disabled="signupForm.$invalid") Submit
+              | &nbsp;
+              a.btn.btn-default(href="/") Cancel

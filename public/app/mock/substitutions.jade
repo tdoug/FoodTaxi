@@ -1,0 +1,46 @@
+#substitutions
+  header
+    .title Substitutions
+  .main
+    .item-row
+      .content.evenly-inline.boxed.status-bars
+        .item
+          .name Delivery Time
+          .progress
+            .progress-bar.half
+        .item
+          .name Promo Code
+          .progress
+            .progress-bar.full
+        .item
+          .name Substitutions
+          .progress
+            .progress-bar.half
+        .item
+          .name Delivery Info
+          .progress
+            .progress-bar.full
+        .item
+          .name Payment Info
+          .progress
+            .progress-bar.half
+
+    include ../includes/item-row
+
+    include ../includes/item-row
+
+    include ../includes/item-row
+
+    .item-row.sub-nav
+      .btn.btn-default Continue Shopping
+      .btn.btn-default Checkout
+
+    include ../includes/footer
+//-  .navbar-bottom
+    .btn-group.btn-group-justified
+      a.btn.btn-default(href='#')
+        i.glyphicon.glyphicon-ok
+        div Checkout
+      a.btn.btn-default(href='#')
+        i.glyphicon.glyphicon-shopping-cart
+        div Continue Shopping

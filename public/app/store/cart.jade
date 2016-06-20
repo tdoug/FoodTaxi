@@ -1,0 +1,42 @@
+link(rel='stylesheet', href='/css/mainmenu.css')
+link(rel='stylesheet', href='/css/groceries.css')
+link(rel='stylesheet', href='/css/browse.css')
+link(rel='stylesheet', href='/css/cart.css')
+script(type="text/javascript", src="/js/cart.js")
+.container(ng-controller="ViewCartController")
+	h3 Your Cart:
+	div.simpleCart_items
+	div.checkout(ng-hide="cart_bad_items")
+		p
+			a.btn.btn-primary.paypal_checkout(href='#', ng-click="paypalCheckout()") Checkout with Paypal
+		p
+			a.btn.btn-primary.cc_checkout(href='#', ng-click="ccNewCheckout()") Checkout with New Credit Card
+		p(ng-show='cc_token_exists')
+			a.btn.btn-primary.cc_checkout(href='#', ng-click="ccExistingCheckout()") Instant Checkout with On-File Credit Card
+			a(href='#', ng-click='delete_existing_cc()') Delete This Credit Card
+	div.cc_checkout(class="ng-hide", ng-show="cc_new_show")		
+		// TODO validate form
+		form(method='POST', name='ccNewForm', ng-submit="ccNewSubmit(ccNewForm.$valid)", novalidate)
+			h2 Your Information
+			p
+				label First Name
+				input#first_name(type='text', ng-model='first_name', required)
+			p
+				label(for='last_name') Last Name
+				input#last_name(type='text', ng-model='last_name', required)
+			p
+				label(for='postal_code') Postal Code
+				input#postal_code(type='text', ng-model="postal_code", required)
+			h2 Credit Card
+			p
+				label Card Number
+				input(type='text', size='20', autocomplete='off', data-encrypted-name='number', ng-model="number", required)
+			p
+				label Expiration (MM/YYYY)
+				input(type='text', size='2', data-encrypted-name='month', ng-model="month", required)
+				| /
+				input(type='text', size='4', data-encrypted-name='year', ng-model="year", required)
+				p
+					input(type='checkbox', value='1', ng-model="save_cc") 
+					| Use This Card for Instant Checkout			
+				input(type='submit', ng-disabled="ccNewForm.$invalid", value="Submit Order")					

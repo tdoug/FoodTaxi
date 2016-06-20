@@ -1,0 +1,17 @@
+#accountrecovery
+    .well
+        p.recoverinfo info@foodtaxi.com
+        p.recoverinfo Food Taxi Account and Password
+        br
+        br
+        P.recoverinfo Dear {{user.fname}},
+        p.recoverinfo We received notification from you indicating that you had forgotten your password.  We have assigned you a temporary password...
+
+    #recoverinfoform
+        .container.text-center
+            form(name="recoverinfoForm")
+                .form-group
+                    input.form-control.col-sm-6.col-xs-6(type='email' name='username' ng-model='username' placeholder='Username')
+                    input.form-control.col-sm-6.col-xs-6(type='text' name='lname' ng-model='lname' placeholder='Last Name')
+                //- .form-group
+                //-     button.btn.btn-primary.recoverbutton.pull-right Submit

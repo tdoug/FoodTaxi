@@ -1,0 +1,14 @@
+#signin
+	#logospace.container
+		img.img-responsive.logo(src="images/logo.png")
+	.container
+		.row-fluid
+			form(ng-controller="LoginController" novalidate)
+				.form-group.col-sm-12.col-xs-12.text-center
+					input.form-control(type="email" placeholder="Email" ng-model="username")
+					input.form-control(type="password" placeholder="Password" ng-model="password")
+				a.col-sm-12.col-xs-12.forgot(href="userloginrecovery") Forgot username and/or password?
+				.form-group.col-sm-12.col-xs-12.text-center
+					flash-notification
+					button.btn.btn-primary.login-button(ng-click="signin(username, password)") Sign In
+					button.btn.btn-primary.cancel-button(ng-click="goBack()") Cancel

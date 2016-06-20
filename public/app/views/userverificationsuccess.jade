@@ -1,0 +1,17 @@
+#verificationsuccesspage
+  header
+    a.nav-left("ng-click='goBack()'") Back
+    .title Account Info
+
+  .main.container
+    h2.text-center Congratulations!
+    p.text-center You've successfully completed the verification process. Please create a password.
+    form(name="SubmitPassword")
+        .form-group
+            input.form-control(type="text" placeholder="Email or Mobile #" name="EmailAddress")
+            span.help-block Must have a minimum of 5 characters
+            input.form-control(type="password" placeholder="Password" name="Password")
+            span.help-block Must contain at least 7 alphanumeric characters
+            input.form-control(type="password" placeholder="Confirm Password" name="ConfirmPassword")
+            br
+            button.btn.btn-default.center-block Submit

@@ -1,0 +1,24 @@
+.container(ng-controller="StoreFinderController")
+	.container-fluid.topbar.list-inline.text-center
+		a.goback.col-xs-2.col-sm-2.col-md-4.col-lg-4(ng-click="goBack()") Back
+		legend.col-xs-7.col-sm-7.col-md-4.col-lg-4.smalltitle Browse
+		a.btn.btn-primary(href='#') Cart
+.container
+	h3 Find Your Store
+	label(for="zip") Enter your zip code below:
+	p
+		input(type="text", name="zip", ng-model="zip")
+		p
+			a.button.btn.btn-primary(href="#", ng-click="findStore()") Find Stores
+	hr
+	div.results
+		form(name="storeForm")
+			div.result(ng-repeat="store in stores")
+				input(type="radio", value="{{store.StoreId}}", ng-model="selected_store")
+				| &nbsp; {{store.Storename}}
+				br
+				{{store.Address}}
+				br
+				{{store.City}}, {{store.State}} {{store.Zip}}
+				p
+					input(type='button', class='btn btn.primary', value='Select This Store', ng-click="saveStore(selected_store)")

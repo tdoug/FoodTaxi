@@ -1,0 +1,28 @@
+link(rel='stylesheet', href='/css/mainmenu.css')
+link(rel='stylesheet', href='/css/groceries.css')
+link(rel='stylesheet', href='/css/browse.css')
+.navbar.navbar-default
+	.container-fluid.topbar.list-inline.text-center
+		div(style='float:left')
+			a.goback(ng-click="goBack()") Back
+		div(style='float:right')
+			a.btn.btn-primary.cart-button(href='/cart') Cart
+		div(style='width:100%;text-align:center')
+			h4 Shop
+div.container-fluid
+	input(class="searchBox",type='text', name='search',ng-change="keydown()",ng-model="search_query",placeholder="Enter a Product Name")
+	div.results
+		div.result(class="animate-repeat result simpleCart_shelfItem", ng-repeat="item in items")
+			div.productLabel
+				span.item_name {{item.Itemname}}
+				span.item_price ${{item.Pricing}}
+				span.item_Quantity(style="display:none") 1
+				span.item_ID(style="display:none") {{item.ItemID}}
+				span.item_image(style="display:none") {{item.ItemImage}}
+				span.item_Aisle(style="display:none") {{item.AisleNumber}}
+			div.image
+				img(src="{{item.ItemImage}}")
+			div.actionButtons
+				a(class="btn btn-primary listButton", href='#') Add to List
+				a(class="btn btn btn-success cartButton item_add", href='javascript:;' ng-click="addToCart()") Add to Cart
+		div(style="clear:both")

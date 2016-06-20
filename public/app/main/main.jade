@@ -1,0 +1,13 @@
+#mainpage
+	#logospace.container
+		img(src="images/logo.png")
+	.container
+		.row.text-center(ng-controller="MainController")
+			.col-xs-12.col-sm-12
+				.form-group.col-sm-12.col-xs-12.text-center.bottom_buttons
+					p
+						a.btn.btn-primary.btn-lg.main-signin-button(ng-click="toSignin()") Sign In					
+					p
+						a.btn.btn-primary.btn-lg.main-register-button(ng-click="toRegister()") Register
+		.text-center
+			a(href="/howtofoodtaxi", style='font-size:36pt') Swipe for a tour

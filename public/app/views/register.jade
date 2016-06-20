@@ -1,0 +1,54 @@
+#registerpage(ng-controller="RegisterController")
+  header
+    a.nav-left(ng-click="goBack()") Back
+    .title Register
+  .main.pad-top
+    .registerform.form.form-horizontal.col-sm-8.col-xs-8.col-sm-offset-2.col-xs-offset-2(name="signupForm" ng-submit="signup()" novalidate)
+      p 
+        | Before registering, search for a store within your area.  If we FoodTaxi is available in your area, select the store you prefer.
+      label(for="zip") Enter your zip code below:
+      p
+        input(type="text", name="zip", ng-model="zip")
+      p
+        a.button.btn.btn-primary(href="#", ng-click="findStore()") Find Stores
+      div.results
+        div.result(ng-repeat="store in stores")
+          input.form-control(type="radio", value="{{store.StoreId}}", name="selected_store", ng-model="selected_store", ng-click="store_clicked()")
+          | &nbsp; {{store.Storename}}
+          br
+          {{store.Address}}
+          br
+          {{store.City}}, {{store.State}} {{store.Zip}}
+      p
+        hr
+        .fromsigninmessage.text-center{{intromessage}}
+        .form-group(ng-show="signupForm.selected_store.$dirty")
+          input.form-control(name="fname", type="text" placeholder="First Name", ng-model="fname", ng-required="true")
+        .form-group(ng-show="signupForm.selected_store.$dirty")
+          input.form-control(name="lname", type="text" placeholder="Last Name", ng-model="lname", ng-required="true")
+
+        .form-group(ng-show="signupForm.fname.$dirty && signupForm.lname.$dirty")
+          input.form-control(name="address" type="text", placeholder="Address", ng-model="address" ng-required="true")
+        .form-group(ng-show="signupForm.fname.$dirty && signupForm.lname.$dirty")
+          input.form-control(name="address_2" type="text", placeholder="Address 2 (optional)", ng-model="address_2")
+
+        .form-group(ng-show="signupForm.address.$dirty")
+          select.form-control(name="state", placeholder="State" id="state-select", ng-model="state", ng-options="state for (abbrv, state) in states")
+
+        .form-group(ng-show="signupForm.address.$dirty")
+          select.form-control(name="city", placeholder="City" ng-model="city", ng-options="city for (abbrv, city) in cities")
+
+        .form-group(ng-show="signupForm.city.$dirty")
+          input.form-control(name="cell", type="text" placeholder="Mobile Number", ng-model="cell" ng-required="true" ng-minlength="10" ng-pattern="/[0-9]/")
+          p.cellphonevalidationmessage You will need to verify the 3 digit code sent to your mobile device on the next screen
+
+        .form-group(ng-show="signupForm.cell.$valid")
+          input.form-control(name="email", type="email", placeholder="E-mail", ng-model="email", ng-required="true")
+          input.form-control(name="password" type="password", placeholder="Password", ng-model="password", ng-required="true")
+          input.form-control(name="confirmPassword" type="password", placeholder="Retry Password", ng-model="confirmPassword", ng-required="true")
+          span{{err}}
+        //- span.validationerror(ng-hide="signupForm.email.$pristine" ng-show="signupForm.password.$dirty && signupForm.email.$invalid") Please use a valid email address
+        .form-group.text-center(ng-show="signupForm.confirmPassword.$dirty")
+          button.btn.btn-primary(type="submit" ng-disabled="signupForm.$invalid") Submit
+        .form-group.text-center(ng-show="signupForm.confirmPassword.$dirty")
+          a.btn.btn-default(href="/") Cancel
